@@ -4,6 +4,7 @@ import { useStore } from "../../../app/stores/store";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
 import LoadingComponent from "../../../app/layout/Loaders/LoadingComponent";
+import ActivityFilters from "./ActivityFilters";
 
 // Needs to be observer so we can see the updates on page for observer properties on ActivityStore
 export default observer(function ActivityDashboard() {
@@ -25,7 +26,7 @@ export default observer(function ActivityDashboard() {
 				<ActivityList />
 			</Grid.Column>
 			<Grid.Column width="6">
-				<h2>Activity Filters</h2>
+				<ActivityFilters />
 			</Grid.Column>
 		</Grid>
 	);
